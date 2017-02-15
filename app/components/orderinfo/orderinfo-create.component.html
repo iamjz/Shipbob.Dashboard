@@ -1,0 +1,53 @@
+<h2>Create Your Order</h2>
+
+<section>
+    <div>Enter Recipient Info:</div>
+    <div>
+        <input [(ngModel)]=orderinfo.TrackingID placeholder="TrackingID">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipFirstName placeholder="RecipFirstName">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipLastName placeholder="RecipLastName">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipAddress placeholder="RecipAddress">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipCity placeholder="RecipCity">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipState placeholder="RecipState">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipCountry placeholder="RecipCountry">
+    </div>
+    <div>
+        <input [(ngModel)]=orderinfo.RecipZip placeholder="RecipZip">
+    </div>
+</section>
+
+<br/>
+
+<div>Enter Quantity for:</div>
+<div *ngFor="let i of orderinfo.ItemsQty">
+    <input [(ngModel)]=orderinfo.ItemsQty[i] placeholder={{i[0]}}>
+</div>
+
+<br/>
+<div>
+    <button (click)="create()">Create Order</button>
+</div>
+
+<br/>
+
+{{postResult}}
+
+
+
+
+
+
+
+
